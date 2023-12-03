@@ -1,0 +1,4 @@
+Redux store
+internals - each slice has initial state, some reducers, and thunk
+extrernal - interface wise, interactions happens mostly through thunks, top level reducers and
+ data is gotten in components using selectors.

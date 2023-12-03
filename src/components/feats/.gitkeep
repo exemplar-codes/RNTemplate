@@ -1,0 +1,4 @@
+Components used within a feature.
+Reused within a screen or a feature flow, but not more than that (move to /components/common)
+
+Remove folder if having `feats` is hard, since only core and common are the different folder

@@ -1,0 +1,10 @@
+This folder will have platform independent (JS only) code.
+The idea is that this folder can be copied and atleast the
+business utils can be used on the web/server.
+
+1. Enums (aka constants) - both business and general
+2. Utils - functions both business and general
+
+example - dateToString, positionifyNumber, maxDecimal, timeAgo etc
+
+In a nutshell, pure functions and constants.

@@ -1,0 +1,9 @@
+Files here are business constants.
+
+Files per module with their enums,
+business as well as UI configs (since they can be used on a web app too)
+
+- login module
+- order module
+- browse module
+- settings module

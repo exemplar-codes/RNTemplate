@@ -1,0 +1,3 @@
+Business logic functions (light weight).
+Stuff like resolving api names etc.
+Everything here is a pure function.
