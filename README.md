@@ -1,3 +1,7 @@
+## Stuff added by me
+1. RTK and react-redux
+2. Some folder structure
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
