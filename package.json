@@ -7,7 +7,16 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "helper__": "",
+    "release-android": "cd android; ./gradlew clean; ./gradlew assembleRelease && echo 'APK is at android/app/build/outputs/apk/release/app-release.apk'; cd ..; open android/app/build/outputs/apk/release/ 2> /dev/null; # generate; print location; open location;",
+    "clean": "watchman watch-del-all; rm -f yarn.lock; rm -rf node_modules; yarn; cd ios; rm -rf Podfile.lock; pod deintegrate; pod repo update; pod install; cd ..; yarn start --reset-cache",
+    "prettier": "prettier --write",
+    "postinstall": "patch-package",
+    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && git clean -f android > /dev/null && echo 'Removed drawable assets' # generate bundle; Remove extra assets;",
+    "reload-android": "adb shell am force-stop com.rntemplate && adb shell am start com.rntemplate/com.rntemplate.MainActivity",
+    "emulator-android": "first_avd=$(emulator -list-avds | tail -n 1) && emulator -avd $first_avd # one shot turn on android emulator, run android used to be enough before Android Studio v. Koala"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
